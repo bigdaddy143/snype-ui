@@ -1,9 +1,9 @@
 <div [ngSwitch]="loading">
   <div *ngSwitchCase="false" class="example-container" ng-hide="searchLoading">
     <mat-form-field>
-      <input matInput placeholder="What are you looking for?">
+      <input matInput type="text" [(ngModel)] = "searchString" (keyup.enter)="search(searchString)" placeholder="What are you looking for?">
     </mat-form-field>
-        <button mat-button (click)="search()">Search</button>
+        <button mat-button (click)="search(searchString)">Search</button>
   </div>
   <app-loading *ngSwitchCase="true"></app-loading>
 </div>
