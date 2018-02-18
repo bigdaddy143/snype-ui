@@ -8,15 +8,16 @@ import { MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatOptionModule
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
-
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
+import { LoadingComponent } from './loading/loading.component';
 
-
+// TODO need to break this out into a dashboard module etc. so that we dont have so many imports stacked in here.
 @NgModule({
   declarations: [
     AppComponent,
-    SearchComponent
+    SearchComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
@@ -26,13 +27,15 @@ import { SearchComponent } from './search/search.component';
     MatFormFieldModule,
     MatOptionModule,
     MatSelectModule,
-    MatInputModule
+    MatInputModule,
+    MatButtonModule
   ],
   exports: [
     MatFormFieldModule,
     MatOptionModule,
     MatSelectModule,
-    MatInputModule
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
