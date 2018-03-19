@@ -1,0 +1,15 @@
+<!-- <div id=container>
+  <search-result *ngFor="let searchResult of searchResults" [searchResultObj]="searchResult"></search-result>
+</div> -->
+
+
+<mat-list>
+  <mat-list-item *ngFor="let searchResult of searchResults">
+    <img matListAvatar src="..." alt="...">
+    <h3 matLine> {{searchResult.from}} </h3>
+    <p matLine>
+      <span> {{searchResult.subject}} </span>
+      <span class="demo-2"> -- {{searchResult.content}} </span>
+    </p>
+  </mat-list-item>
+</mat-list>

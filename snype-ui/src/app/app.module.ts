@@ -13,13 +13,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { LoadingComponent } from './loading/loading.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { SearchResultComponent } from './search-result/search-result.component';
 
 // TODO need to break this out into a dashboard module etc. so that we dont have so many imports stacked in here.
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
-    LoadingComponent
+    LoadingComponent,
+    DashboardComponent,
+    SearchResultComponent
   ],
   imports: [
     BrowserModule,
